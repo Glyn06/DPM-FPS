@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 54323103312185574}
   - component: {fileID: 136986941972882994}
   - component: {fileID: 114048742943755376}
+  - component: {fileID: 114551097491014934}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -84,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1320444872203536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.35, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4187379530488444}
@@ -233,6 +234,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1b1d13f1df14214889ea4e5ab3e4ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bullet: {fileID: 114323632062002170, guid: b63e1ef0cb52f2245b49d18bda93c5ee, type: 2}
+--- !u!114 &114551097491014934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1320444872203536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b93973782e6ae4cbd506224e94695a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 114458308674940994}
 --- !u!114 &114639659447005034
 MonoBehaviour:
   m_ObjectHideFlags: 1
