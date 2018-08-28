@@ -18,13 +18,27 @@ public class InputManager : MonoBehaviour {
     }
     #endregion
 
-    bool CheckPCPlatform() {
+    InputInterface input;
+
+    /*  bool CheckPCPlatform() {
+          if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
+              return true;
+          return false;
+      }
+
+    */
+    
+    private void Start()
+    {
         if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
-            return true;
-        return false;
+        {
+            input = new InputPC();
+        }
     }
-    public bool Fire() {
-        if (CheckPCPlatform() && Input.GetMouseButtonDown(0))
+
+    public bool Fire()
+    {
+        if (input.FireButton())
             return true;
         return false;
     }
