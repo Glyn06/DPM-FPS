@@ -26,4 +26,14 @@ public class Bullet : MonoBehaviour {
         dir = _dir;
         trail.gameObject.SetActive(true);
     }
+    //レアンドル　
+    public void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("レアンドル");
+        Damageable damageable = collision.collider.GetComponent<Damageable>();
+        if (damageable!= null)
+        {
+            damageable.SetDamage(10);
+        }
+    }
 }

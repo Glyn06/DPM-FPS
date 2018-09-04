@@ -24,13 +24,13 @@ public class InputManager : MonoBehaviour {
     {
         if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
         {
-            input = new InputPC();
+           // input = new InputPC();
         }
         else
         {
-            input = GetComponentInChildren<InputVR>();
+           // input = GetComponentInChildren<InputVR>();
         }
-        //input = GetComponentInChildren<InputVR>();
+        input = GetComponentInChildren<InputVR>();
     }
 
     public bool RightFire()

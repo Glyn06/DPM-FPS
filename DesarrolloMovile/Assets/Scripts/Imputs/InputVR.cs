@@ -49,12 +49,18 @@ public class InputVR : MonoBehaviour, InputInterface
     }
 
     public bool LeftReloadButton() {
-        //DO IT REANDORU KUN
+        if (VRLeftController.buttonOnePressed)
+        {
+            return true;
+        }
         return false;
     }
 
     public bool RightReloadButton() {
-        //DO IT
+        if (VRRightController.buttonOnePressed)
+        {
+            return true;
+        }
         return false;
     }
 }
