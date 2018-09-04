@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
-    public Bullet bullet;
     public Camera cam;
+
+    Pool bulletPool;
 
     private void Update()
     {
@@ -13,8 +14,9 @@ public class Weapon : MonoBehaviour {
     }
 
     public void Fire() {
-        Bullet instance;
-        instance = Instantiate(bullet, transform.position, Quaternion.identity, null);
-        instance.Fire(transform.forward);
+        bulletPool = PoolManager.instance.GetPool("BulletPool");
+        GameObject gameObjectInstance = bulletPool.UseObj();
+        gameObjectInstance.transform.position = transform.position;
+        gameObjectInstance.GetComponent<Bullet>().Fire(transform.forward);
     }
 }

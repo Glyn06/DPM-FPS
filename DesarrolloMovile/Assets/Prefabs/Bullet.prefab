@@ -11,6 +11,22 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1576436981080264}
   m_IsPrefabParent: 1
+--- !u!1 &1006943356095956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4950590859457060}
+  - component: {fileID: 96079757511525252}
+  m_Layer: 0
+  m_Name: Trail
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1576436981080264
 GameObject:
   m_ObjectHideFlags: 0
@@ -22,7 +38,6 @@ GameObject:
   - component: {fileID: 33120826991200700}
   - component: {fileID: 136379615663437098}
   - component: {fileID: 23731040091194566}
-  - component: {fileID: 96067588307388182}
   - component: {fileID: 54464557595729340}
   - component: {fileID: 114323632062002170}
   m_Layer: 0
@@ -39,12 +54,26 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1576436981080264}
   m_LocalRotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: -9.595892, y: 0.443, z: -28.545}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.01}
-  m_Children: []
+  m_Children:
+  - {fileID: 4950590859457060}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 90}
+--- !u!4 &4950590859457060
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1006943356095956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4583470788473328}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23731040091194566
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -101,13 +130,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!96 &96067588307388182
+--- !u!96 &96079757511525252
 TrailRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1576436981080264}
+  m_GameObject: {fileID: 1006943356095956}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -136,7 +165,7 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Time: 2
+  m_Time: 0.5
   m_Parameters:
     serializedVersion: 2
     widthMultiplier: 0.1
@@ -205,6 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c165ac4741c29d3498298c7497b027f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trail: {fileID: 96079757511525252}
 --- !u!136 &136379615663437098
 CapsuleCollider:
   m_ObjectHideFlags: 1

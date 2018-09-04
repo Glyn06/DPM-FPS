@@ -4,24 +4,41 @@ using UnityEngine;
 
 public class PoolManager : MonoBehaviour {
 
-    public Bullet bulletPrefab;
-    public int cantBullets = 10;
-
-    List<Bullet> bullets = new List<Bullet>();
-
+    #region Singleton
+    public static PoolManager instance;
     private void Awake()
     {
-        for (int i = 0; i < cantBullets; i++)
+        if (instance != null)
         {
-            bullets.Add(bulletPrefab);
+            Destroy(gameObject);
+            return;
         }
-        for (int i = 0; i < cantBullets; i++)
+        DontDestroyOnLoad(gameObject);
+        instance = this;
+    }
+    #endregion
+
+    Dictionary<string, Pool> pools = new Dictionary<string, Pool>();
+
+    private void Start()
+    {
+        foreach (Transform child in transform)
         {
-            GameObject bullet;
-            bullet = Instantiate(bullets[i].gameObject);
-            bullet.SetActive(false);
+            Pool po = child.GetComponent<Pool>();
+            pools.Add(po.name, po);
         }
     }
 
+    public Pool GetPool(string name) {
 
+        if (pools.ContainsKey(name))
+        {
+            return pools[name];
+        }
+        else
+        {
+            Debug.LogWarning("Name is not on the PoolManager's Dictionary");
+            return null;
+        }
+    }
 }
