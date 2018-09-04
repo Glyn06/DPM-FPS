@@ -19,10 +19,14 @@ public class Player : MonoBehaviour {
     #endregion
 
     public Weapon weapon;
+    public VRTK.VRTK_ControllerEvents VRController;
 
     private void Update()
     {
-        if (InputManager.instance.Fire())
+        if (InputManager.instance.Fire() || (VRController != null && VRController.triggerPressed ))
+        {
             weapon.Fire();
+            Debug.Log("VR fire");
+        }
     }
 }

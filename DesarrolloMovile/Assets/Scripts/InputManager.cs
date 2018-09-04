@@ -34,6 +34,14 @@ public class InputManager : MonoBehaviour {
         {
             input = new InputPC();
         }
+        else
+        {
+            input = new InputVR();
+           // input.VRController = 
+        }
+           // input = new InputVR();
+
+
     }
 
     public bool Fire()

@@ -2,19 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputVR : MonoBehaviour, InputInterface
+public class InputVR : InputInterface
 {
-
+    public VRTK.VRTK_ControllerEvents VRController;
     public bool FireButton()
     {
-       /* if (GetComponent<VRTK_InteractGrab>().GetGrabbedObject != null)
+        if (VRController.triggerPressed)
         {
-            var controllerEvents = GetComponent<VRTK_ControllerEvents>();
-            if (controllerEvents.IsButtonPressed(VRTK_ControllerEvents.ButtonAlias.Trigger_Press) 
-            {
-                return true;
-            }
-        }*/
+            Debug.Log("VR FireButton");
+            return true;
+        }
         return false;
     }
 }
