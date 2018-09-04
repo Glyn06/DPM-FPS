@@ -239,11 +239,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!20 &504246027 stripped
-Camera:
-  m_PrefabParentObject: {fileID: 20534269661524904, guid: dea0c6759af7c074590a01e539cbbd1e,
-    type: 2}
-  m_PrefabInternal: {fileID: 540256293}
 --- !u!1001 &540256293
 Prefab:
   m_ObjectHideFlags: 0
@@ -283,23 +278,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4984802727873420, guid: dea0c6759af7c074590a01e539cbbd1e, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 4984802727873420, guid: dea0c6759af7c074590a01e539cbbd1e, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 4984802727873420, guid: dea0c6759af7c074590a01e539cbbd1e, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 114458308674940994, guid: dea0c6759af7c074590a01e539cbbd1e,
-        type: 2}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 504246027}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dea0c6759af7c074590a01e539cbbd1e, type: 2}
   m_IsPrefabParent: 0
@@ -420,7 +398,7 @@ Prefab:
     - target: {fileID: 114055160147040418, guid: c7ddf4527904ec04583310caa056d7a1,
         type: 2}
       propertyPath: cantObjects
-      value: 18
+      value: 36
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c7ddf4527904ec04583310caa056d7a1, type: 2}

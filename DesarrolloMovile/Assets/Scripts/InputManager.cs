@@ -19,28 +19,18 @@ public class InputManager : MonoBehaviour {
     #endregion
 
     InputInterface input;
-
-    /*  bool CheckPCPlatform() {
-          if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
-              return true;
-          return false;
-      }
-
-    */
     
     private void Start()
     {
         if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
         {
-            //input = new InputPC();
+            input = new InputPC();
         }
         else
         {
-            //input = GetComponentInChildren<InputVR>();
+            input = GetComponentInChildren<InputVR>();
         }
-        input = GetComponentInChildren<InputVR>();
-
-
+        //input = GetComponentInChildren<InputVR>();
     }
 
     public bool RightFire()
@@ -56,5 +46,4 @@ public class InputManager : MonoBehaviour {
             return true;
         return false;
     }
-    //CHECKVRPLATFORM DO IT!
 }
