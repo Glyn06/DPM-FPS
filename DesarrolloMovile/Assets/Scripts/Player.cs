@@ -23,14 +23,24 @@ public class Player : MonoBehaviour {
 
     private void Update()
     {
-        if (InputManager.instance.RightFire())
+        if (!RightWeapon.EmptyClip() && InputManager.instance.RightFire())
         {
             RightWeapon.Fire();
         }
 
-        if (InputManager.instance.LeftFire())
+        if (!LeftWeapon.EmptyClip() && InputManager.instance.LeftFire())
         {
             LeftWeapon.Fire();
+        }
+
+        if (InputManager.instance.LeftReload())
+        {
+            LeftWeapon.Reload();
+        }
+
+        if (InputManager.instance.RightReload())
+        {
+            RightWeapon.Reload();
         }
     }
 }

@@ -47,4 +47,14 @@ public class InputVR : MonoBehaviour, InputInterface
 
         return false;
     }
+
+    public bool LeftReloadButton() {
+        //DO IT REANDORU KUN
+        return false;
+    }
+
+    public bool RightReloadButton() {
+        //DO IT
+        return false;
+    }
 }
