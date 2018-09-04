@@ -4,5 +4,6 @@ using UnityEngine;
 
 interface InputInterface
 {
-    bool FireButton(); 
+    bool RightFireButton(); 
+    bool LeftFireButton();
 }

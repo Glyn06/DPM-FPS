@@ -32,24 +32,29 @@ public class InputManager : MonoBehaviour {
     {
         if (Application.platform == RuntimePlatform.WindowsPlayer || Application.platform == RuntimePlatform.WindowsEditor)
         {
-            input = new InputPC();
+            //input = new InputPC();
         }
         else
         {
-            input = new InputVR();
-           // input.VRController = 
+            //input = GetComponentInChildren<InputVR>();
         }
-           // input = new InputVR();
+        input = GetComponentInChildren<InputVR>();
 
 
     }
 
-    public bool Fire()
+    public bool RightFire()
     {
-        if (input.FireButton())
+        if (input.RightFireButton())
             return true;
         return false;
     }
 
+    public bool LeftFire()
+    {
+        if (input.LeftFireButton())
+            return true;
+        return false;
+    }
     //CHECKVRPLATFORM DO IT!
 }

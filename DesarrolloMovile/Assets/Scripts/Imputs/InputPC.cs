@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class InputPC : InputInterface
 {
-    public bool FireButton()
+    public bool LeftFireButton()
     {
         return Input.GetMouseButtonDown(0);
+    }
+    public bool RightFireButton()
+    {
+        return Input.GetMouseButtonDown(1);
     }
 }

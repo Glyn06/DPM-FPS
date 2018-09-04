@@ -2,16 +2,49 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputVR : InputInterface
+public class InputVR : MonoBehaviour, InputInterface
 {
-    public VRTK.VRTK_ControllerEvents VRController;
-    public bool FireButton()
+    public VRTK.VRTK_ControllerEvents VRRightController;
+    public VRTK.VRTK_ControllerEvents VRLeftController;
+
+    private bool onRightTriggerDown = false;
+    private bool onLeftTriggerDown = false;
+
+    public bool LeftFireButton()
     {
-        if (VRController.triggerPressed)
+
+        if (VRRightController.triggerPressed && !onRightTriggerDown)
         {
-            Debug.Log("VR FireButton");
+            onRightTriggerDown = true;
             return true;
         }
+        
+
+        if(!VRRightController.triggerPressed && onRightTriggerDown)
+        {
+            onRightTriggerDown = false;
+            return false;
+        }
+
+        return false;
+    }
+
+    public bool RightFireButton()
+    {
+
+        if (VRLeftController.triggerPressed && !onLeftTriggerDown)
+        {
+            onLeftTriggerDown = true;
+            return true;
+        }
+
+
+        if (!VRLeftController.triggerPressed && onLeftTriggerDown)
+        {
+            onLeftTriggerDown = false;
+            return false;
+        }
+
         return false;
     }
 }
