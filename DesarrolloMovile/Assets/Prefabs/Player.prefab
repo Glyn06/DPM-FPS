@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20534269661524904}
+  maxClip: 20
 --- !u!114 &114551097491014934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,6 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20534269661524904}
+  maxClip: 20
 --- !u!124 &124912869194980124
 Behaviour:
   m_ObjectHideFlags: 1

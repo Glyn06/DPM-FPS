@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour {
 
+    public delegate void OnClipChange();
+    public OnClipChange onClipChangeCallBack;
+
     public Camera cam;
 
     Pool bulletPool;
@@ -11,9 +14,11 @@ public class Weapon : MonoBehaviour {
     int maxClip;
     int clip;
 
-    private void Awake()
+    private void Start()
     {
         clip = maxClip;
+
+        CheckAndInvokeClipCallBack();
     }
 
     private void Update()
@@ -27,15 +32,28 @@ public class Weapon : MonoBehaviour {
         gameObjectInstance.transform.position = transform.position;
         gameObjectInstance.GetComponent<Bullet>().Fire(transform.forward);
         clip--;
+
+        CheckAndInvokeClipCallBack();
     }
 
     public void Reload() {
         clip = maxClip;
+
+        CheckAndInvokeClipCallBack();
     }
 
     public bool EmptyClip() {
         if (clip <= 0)
             return true;
         return false;
+    }
+
+    public int GetClip() {
+        return clip;
+    }
+
+    void CheckAndInvokeClipCallBack() {
+        if (onClipChangeCallBack != null)
+            onClipChangeCallBack.Invoke();
     }
 }
