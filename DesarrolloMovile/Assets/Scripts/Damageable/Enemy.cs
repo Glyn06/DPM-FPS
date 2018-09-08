@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour {
         if (life <= 0)
         {
             Destroy(gameObject);
+            PlayerData.instance.AddScore(50);
         }
 	}
 }

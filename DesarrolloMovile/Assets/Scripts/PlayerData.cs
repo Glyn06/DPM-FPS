@@ -4,7 +4,26 @@ using UnityEngine;
 
 public class PlayerData : MonoBehaviour {
 
+    #region Singleton
+    public static PlayerData instance;
+    private void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        DontDestroyOnLoad(gameObject);
+        instance = this;
+    }
+    #endregion
+
+    public delegate void OnScoreChange();
+    public OnScoreChange onScoreChangeCallBack;
+
     public Player player;
+
+    int score = 0;
 
     public Weapon getWeapon(string side) {
         switch (side)
@@ -17,5 +36,16 @@ public class PlayerData : MonoBehaviour {
                 Debug.LogWarning("No such weapon");
                 return null;
         }
+    }
+
+    public int GetScore() {
+        return score;
+    }
+
+    public void AddScore(int scoreToAdd) {
+        score += scoreToAdd;
+
+        if (onScoreChangeCallBack != null)
+            onScoreChangeCallBack();
     }
 }
