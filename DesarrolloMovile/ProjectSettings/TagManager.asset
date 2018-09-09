@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - m_RoomObstacle
+  - m_RoomWalkable
   - 
   - 
   - 
