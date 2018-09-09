@@ -5,7 +5,8 @@ using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour {
     public int life;
-    public NavMeshAgent enemyAgent;
+    public int enemyDamage;
+    private NavMeshAgent enemyAgent;
     private Player playerInstance;
 	// Use this for initialization
 	void Start () {
@@ -23,4 +24,13 @@ public class Enemy : MonoBehaviour {
             PlayerData.instance.AddScore(50);
         }
 	}
+    public void OnCollisionEnter(Collision collision)
+    {
+        Damageable damageable = collision.collider.GetComponent<Damageable>();
+        if (damageable != null)
+        {
+            damageable.SetDamage(enemyDamage);
+            Destroy(gameObject);
+        }
+    }
 }

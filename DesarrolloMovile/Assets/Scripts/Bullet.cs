@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour {
 
     public TrailRenderer trail;
-
+    public int bulletDamage;
     Vector3 dir;
     float maxLifeTime = 2.5f;
     float timer;
@@ -29,11 +29,10 @@ public class Bullet : MonoBehaviour {
     //レアンドル　
     public void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("レアンドル");
         Damageable damageable = collision.collider.GetComponent<Damageable>();
         if (damageable!= null)
         {
-            damageable.SetDamage(10);
+            damageable.SetDamage(bulletDamage);
         }
     }
 }

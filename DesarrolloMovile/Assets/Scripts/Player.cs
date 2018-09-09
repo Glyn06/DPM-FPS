@@ -20,6 +20,7 @@ public class Player : MonoBehaviour {
 
     public Weapon RightWeapon;
     public Weapon LeftWeapon;
+    public int life;
 
     private void Update()
     {
@@ -41,6 +42,11 @@ public class Player : MonoBehaviour {
         if (InputManager.instance.RightReload())
         {
             RightWeapon.Reload();
+        }
+
+        if (life <= 0)
+        {
+            Destroy(gameObject);
         }
     }
 }
