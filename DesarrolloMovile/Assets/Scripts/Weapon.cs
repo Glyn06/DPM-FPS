@@ -28,8 +28,7 @@ public class Weapon : MonoBehaviour {
 
     public void Fire() {
         bulletPool = PoolManager.instance.GetPool("BulletPool");
-        GameObject gameObjectInstance = bulletPool.UseObj();
-        gameObjectInstance.transform.position = transform.position;
+        GameObject gameObjectInstance = bulletPool.UseObj(transform.position);
         gameObjectInstance.GetComponent<Bullet>().Fire(transform.forward);
         clip--;
 

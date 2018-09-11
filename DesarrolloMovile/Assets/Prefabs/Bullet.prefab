@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trail: {fileID: 96079757511525252}
+  bulletDamage: 10
 --- !u!136 &136379615663437098
 CapsuleCollider:
   m_ObjectHideFlags: 1
