@@ -29,10 +29,12 @@ public class Bullet : MonoBehaviour {
     //レアンドル　
     public void OnCollisionEnter(Collision collision)
     {
+
         Damageable damageable = collision.collider.GetComponent<Damageable>();
         if (damageable!= null)
         {
             damageable.SetDamage(bulletDamage);
+            GetComponent<PoolObject>().Recycle();
         }
     }
 }

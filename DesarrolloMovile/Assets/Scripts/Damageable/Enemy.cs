@@ -14,7 +14,6 @@ public class Enemy : MonoBehaviour {
 
     private void Start()
     {
-        Debug.Log("La cocha de leandro");
         playerInstance = Player.instance;
         enemyAgent = GetComponent<NavMeshAgent>();
         enemyAgent.SetDestination(playerInstance.transform.position);
