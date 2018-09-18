@@ -23,13 +23,19 @@ public class Enemy : MonoBehaviour {
     private void OnEnable()
     {
         life = maxLife;
-        enemyAgent.enabled = true;
-        enemyAgent.SetDestination(playerInstance.transform.position);
+        if (enemyAgent != null)
+        {
+            enemyAgent.enabled = true;
+            enemyAgent.SetDestination(playerInstance.transform.position);
+        }
     }
 
     private void OnDisable()
     {
-        enemyAgent.enabled = false;
+        if (enemyAgent != null)
+        {
+            enemyAgent.enabled = false;
+        }
     }
 
     // Update is called once per frame
