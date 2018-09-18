@@ -12,14 +12,14 @@ public class UIcontroller : MonoBehaviour {
 
     private void Awake()
     {
-        data.getWeapon("Left").onClipChangeCallBack += UpdateUI;
-        data.getWeapon("Right").onClipChangeCallBack += UpdateUI;
+        data.GetWeapon("Left").onClipChangeCallBack += UpdateUI;
+        data.GetWeapon("Right").onClipChangeCallBack += UpdateUI;
         data.onScoreChangeCallBack += UpdateUI;
     }
 
     public void UpdateUI() {
-        lBulletText.text = data.getWeapon("Left").GetClip().ToString("00");
-        rBulletText.text = data.getWeapon("Right").GetClip().ToString("00");
+        lBulletText.text = data.GetWeapon("Left").GetClip().ToString("00");
+        rBulletText.text = data.GetWeapon("Right").GetClip().ToString("00");
         scoreText.text = "Score: " + data.GetScore().ToString("0000");
     }
 }

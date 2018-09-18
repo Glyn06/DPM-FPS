@@ -25,7 +25,7 @@ public class PlayerData : MonoBehaviour {
 
     int score = 0;
 
-    public Weapon getWeapon(string side) {
+    public Weapon GetWeapon(string side) {
         switch (side)
         {
             case "Left":

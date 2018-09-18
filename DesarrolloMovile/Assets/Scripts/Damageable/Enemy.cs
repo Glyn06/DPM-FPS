@@ -10,23 +10,20 @@ public class Enemy : MonoBehaviour {
     private Player playerInstance;
     [SerializeField]
     private int maxLife;
+    private float enabletimer;
     // Use this for initialization
 
     private void Start()
     {
         playerInstance = Player.instance;
         enemyAgent = GetComponent<NavMeshAgent>();
-        enemyAgent.SetDestination(playerInstance.transform.position);
     }
+
 
     private void OnEnable()
     {
         life = maxLife;
-        if (enemyAgent != null)
-        {
-            enemyAgent.enabled = true;
-            enemyAgent.SetDestination(playerInstance.transform.position);
-        }
+        enabletimer = 0;
     }
 
     private void OnDisable()
@@ -39,6 +36,19 @@ public class Enemy : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
+
+        if (enemyAgent != null)
+        {
+            if (enemyAgent.enabled == false)
+            {
+                enabletimer += Time.deltaTime;
+                if (enabletimer >= 1)
+                {
+                    enemyAgent.enabled = true;
+                    enemyAgent.SetDestination(playerInstance.transform.position);
+                }
+            }
+        }
 
         if (life <= 0)
         {

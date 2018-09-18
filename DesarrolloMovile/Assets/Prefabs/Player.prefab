@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RightWeapon: {fileID: 114758272913992620}
   LeftWeapon: {fileID: 114458308674940994}
-  life: 100
+  life: 100000000
 --- !u!114 &114639659447005034
 MonoBehaviour:
   m_ObjectHideFlags: 1
