@@ -51,6 +51,15 @@ public class Weapon : MonoBehaviour {
         return clip;
     }
 
+    public void SetClip(int clipMod)
+    {
+        clip += clipMod;
+    }
+
+    public void SetMaxClip(int maxclipMod) {
+        maxClip += maxclipMod;
+    }
+
     void CheckAndInvokeClipCallBack() {
         if (onClipChangeCallBack != null)
             onClipChangeCallBack.Invoke();

@@ -15,12 +15,26 @@ public class Player : MonoBehaviour {
         }
         DontDestroyOnLoad(gameObject);
         instance = this;
+
+        GetAndImplementrPerks();
     }
     #endregion
 
     public Weapon RightWeapon;
     public Weapon LeftWeapon;
     public int life;
+
+    private PerkSystem perkSystem;
+
+    public void GetAndImplementrPerks()
+    {
+        perkSystem = GetComponent<PerkSystem>();
+        for (int i = 0; i < perkSystem.perks.Count; i++)
+        {
+            perkSystem.perks[i].SetWeapons(RightWeapon, LeftWeapon);
+            perkSystem.perks[i].ImplementPerk();
+        }
+    }
 
     private void Update()
     {
