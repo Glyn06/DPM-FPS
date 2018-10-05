@@ -12,7 +12,8 @@ public class AmmoPerk : Perk {
         //throw new System.NotImplementedException();
         for (int i = 0; i < weapons.Count; i++)
         {
-            weapons[i].SetMaxClip(clipSizeMod);
+            weapons[i].
+                SetMaxClip(clipSizeMod);
         }
     }
 
@@ -21,7 +22,8 @@ public class AmmoPerk : Perk {
         //throw new System.NotImplementedException();
         for (int i = 0; i < weapons.Count; i++)
         {
-            weapons[i].SetMaxClip(-clipSizeMod);
+            weapons[i].
+                SetMaxClip(-clipSizeMod);
         }
     }
 }
