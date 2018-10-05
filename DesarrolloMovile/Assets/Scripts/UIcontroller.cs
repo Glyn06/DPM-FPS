@@ -20,6 +20,7 @@ public class UIcontroller : MonoBehaviour {
     public void UpdateUI() {
         lBulletText.text = data.GetWeapon("Left").GetClip().ToString("00");
         rBulletText.text = data.GetWeapon("Right").GetClip().ToString("00");
+        if(data != null)
         scoreText.text = "Score: " + data.GetScore().ToString("0000");
     }
 }

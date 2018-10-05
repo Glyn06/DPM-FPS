@@ -13,7 +13,6 @@ public class PlayerData : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
         instance = this;
     }
     #endregion

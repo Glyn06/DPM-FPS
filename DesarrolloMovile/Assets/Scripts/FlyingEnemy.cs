@@ -6,6 +6,10 @@ public class FlyingEnemy : MonoBehaviour {
 
 
     public float speed;
+    public int life;
+    [SerializeField]
+    private int maxLife;
+    private Player playerInstance;
 
     private float t = 0;
     private Vector3 p0;
@@ -47,9 +51,20 @@ public class FlyingEnemy : MonoBehaviour {
         p2 = RandomizePoint(p2);
         p3 = RandomizePoint(p3);
         rb = GetComponent<Rigidbody>();
+        playerInstance = Player.instance;
+
     }
-	
-	void Update () {
+
+    private void OnEnable()
+    {
+        life = maxLife;
+    }
+    private void OnDisable()
+    {
+        if (PlayerData.instance != null)
+            PlayerData.instance.AddScore(50);
+    }
+    void Update () {
         if (t > 1)        
             ResetPoints(p3);
 
@@ -57,6 +72,10 @@ public class FlyingEnemy : MonoBehaviour {
         t += Time.deltaTime * speed;
 
         rb.MovePosition(position);
+
+       
+
+        transform.LookAt(playerInstance.transform.position);
     }
 
     private void CalculatePosition(float t)

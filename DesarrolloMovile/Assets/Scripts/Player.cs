@@ -13,7 +13,6 @@ public class Player : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
         instance = this;
 
         GetAndImplementrPerks();

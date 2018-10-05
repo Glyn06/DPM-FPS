@@ -32,6 +32,9 @@ public class Enemy : MonoBehaviour {
         {
             enemyAgent.enabled = false;
         }
+        if (PlayerData.instance != null)        
+        PlayerData.instance.AddScore(50);
+
     }
 
     // Update is called once per frame
@@ -53,7 +56,6 @@ public class Enemy : MonoBehaviour {
         if (life <= 0)
         {
             GetComponent<PoolObject>().Recycle();
-            PlayerData.instance.AddScore(50);
         }
 	}
     public void OnCollisionEnter(Collision collision)
