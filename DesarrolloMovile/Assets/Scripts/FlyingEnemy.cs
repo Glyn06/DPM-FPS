@@ -71,11 +71,15 @@ public class FlyingEnemy : MonoBehaviour {
         CalculatePosition(t);
         t += Time.deltaTime * speed;
 
-        rb.MovePosition(position);
 
        
 
-        transform.LookAt(playerInstance.transform.position);
+        //transform.LookAt(playerInstance.transform.position);
+    }
+    private void FixedUpdate()
+    {
+        rb.MovePosition(position);
+
     }
 
     private void CalculatePosition(float t)
