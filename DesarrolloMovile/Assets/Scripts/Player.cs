@@ -31,8 +31,17 @@ public class Player : MonoBehaviour {
         for (int i = 0; i < perkSystem.perks.Count; i++)
         {
             perkSystem.perks[i].SetWeapons(RightWeapon, LeftWeapon);
+            perkSystem.perks[i].SetPlayer(this);
             perkSystem.perks[i].ImplementPerk();
         }
+    }
+
+    public void SetLife(int _lifeMod) {
+        life = _lifeMod;
+    }
+
+    public int GetLife() {
+        return life;
     }
 
     private void Update()
