@@ -6,10 +6,10 @@ public class InputPC : InputInterface
 {
     public bool LeftFireButton()
     {
-        return Input.GetMouseButtonDown(0);
+        return Input.GetMouseButton(0);
     }
     public bool RightFireButton()
     {
-        return Input.GetMouseButtonDown(1);
+        return Input.GetMouseButton(1);
     }
 }
