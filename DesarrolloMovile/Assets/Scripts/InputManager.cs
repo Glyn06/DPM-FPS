@@ -45,16 +45,4 @@ public class InputManager : MonoBehaviour {
             return true;
         return false;
     }
-
-    public bool LeftReload() {
-        if (input.LeftReloadButton())
-            return true;
-        return false;
-    }
-
-    public bool RightReload() {
-        if (input.RightReloadButton())
-            return true;
-        return false;
-    }
 }

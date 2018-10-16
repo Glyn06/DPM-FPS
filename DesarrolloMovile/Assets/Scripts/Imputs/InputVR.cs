@@ -17,12 +17,4 @@ public class InputVR : MonoBehaviour, InputInterface
     {
         return false;
     }
-
-    public bool LeftReloadButton() {
-        return false;
-    }
-
-    public bool RightReloadButton() {
-        return false;
-    }
 }

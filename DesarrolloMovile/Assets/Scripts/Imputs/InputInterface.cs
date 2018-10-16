@@ -6,6 +6,4 @@ interface InputInterface
 {
     bool RightFireButton();
     bool LeftFireButton();
-    bool LeftReloadButton();
-    bool RightReloadButton();
 }
