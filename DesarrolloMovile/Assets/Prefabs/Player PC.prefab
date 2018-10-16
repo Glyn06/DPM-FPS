@@ -1049,6 +1049,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20188157716204786}
+  rateOfFire: 0.25
 --- !u!114 &114472182210071274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1061,6 +1062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 20188157716204786}
+  rateOfFire: 0.25
 --- !u!114 &114472722477556504
 MonoBehaviour:
   m_ObjectHideFlags: 1

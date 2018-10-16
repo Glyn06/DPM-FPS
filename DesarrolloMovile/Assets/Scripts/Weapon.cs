@@ -27,4 +27,12 @@ public class Weapon : MonoBehaviour {
             timer = 0;
         }
     }
+
+    public float GetRateOfFire() {
+        return rateOfFire;
+    }
+
+    public void SetRateOfFire(float _rateOfFire) {
+        rateOfFire = _rateOfFire;
+    }
 }
