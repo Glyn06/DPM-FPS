@@ -17,4 +17,14 @@ public class InputVR : MonoBehaviour, InputInterface
     {
         return false;
     }
+
+    public bool RightSwordButton()
+    {
+        return false;
+    }
+
+    public bool LeftSwordButton()
+    {
+        return false;
+    }
 }

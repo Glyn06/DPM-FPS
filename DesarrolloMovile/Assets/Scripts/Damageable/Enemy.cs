@@ -8,9 +8,14 @@ public class Enemy : MonoBehaviour {
     public int enemyDamage;
     private NavMeshAgent enemyAgent;
     private Player playerInstance;
-    [SerializeField]
-    private int maxLife;
+    private bool isAttacking;
+    private Damageable target;
+    [SerializeField] private int maxLife;
+    [SerializeField] private float attackSpeed = 1.5f;
+    
+
     private float enabletimer;
+    private float attackSpeedTimer;
     // Use this for initialization
 
     private void Start()
@@ -30,11 +35,11 @@ public class Enemy : MonoBehaviour {
     {
         if (enemyAgent != null)
         {
+            enemyAgent.isStopped = false;
             enemyAgent.enabled = false;
+            isAttacking = false;
+            target = null;
         }
-        if (PlayerData.instance != null)        
-        PlayerData.instance.AddScore(50);
-
     }
 
     // Update is called once per frame
@@ -56,15 +61,38 @@ public class Enemy : MonoBehaviour {
         if (life <= 0)
         {
             GetComponent<PoolObject>().Recycle();
+
+            if (PlayerData.instance != null)        
+            PlayerData.instance.AddScore(50);
+        }
+
+        if (isAttacking)
+        {
+            attackSpeedTimer += Time.deltaTime;
         }
 	}
+
     public void OnCollisionEnter(Collision collision)
     {
-        Damageable damageable = collision.collider.GetComponent<Damageable>();
-        if (damageable != null && !collision.gameObject.CompareTag("Enemy"))
+        if (collision.gameObject.CompareTag("Player"))
         {
-            damageable.SetDamage(enemyDamage);
-            GetComponent<PoolObject>().Recycle();
+            target = collision.gameObject.GetComponent<Damageable>();
+            isAttacking = true;
+            enemyAgent.isStopped = true;
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if ( target != null && attackSpeedTimer >= attackSpeed)
+        {
+            Attack(target, enemyDamage);
+            attackSpeedTimer = 0;
+        }
+    }
+
+    public void Attack(Damageable _target, int _enemyDamage) {
+        _target.SetDamage(_enemyDamage);
     }
 }
