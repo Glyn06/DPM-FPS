@@ -73,6 +73,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4275705146891258}
   - component: {fileID: 114449093210738440}
+  - component: {fileID: 114563604995364360}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -651,7 +652,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1143098071239376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.58615685, y: -2.6039677, z: 2.460312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4439492823751436}
@@ -1613,7 +1614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerButton: {fileID: 11400000, guid: d78b57489ef4e884990e8d7415ce4982, type: 2}
   grapButton: {fileID: 11400000, guid: ef77f16b4481faf47a5ef2d65dced482, type: 2}
-  sword: {fileID: 0}
+  sword: {fileID: 1526781832207916}
   swordSize: 1
 --- !u!114 &114325432099522692
 MonoBehaviour:
@@ -1719,6 +1720,20 @@ MonoBehaviour:
   rig2DFallback: {fileID: 1500986921187442}
   audioListener: {fileID: 4771850458346934}
   allowToggleTo2D: 1
+--- !u!114 &114563604995364360
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1143098071239376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b93973782e6ae4cbd506224e94695a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RightWeapon: {fileID: 0}
+  LeftWeapon: {fileID: 0}
+  life: 100
 --- !u!114 &114578279132430770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1933,7 +1948,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerButton: {fileID: 11400000, guid: d78b57489ef4e884990e8d7415ce4982, type: 2}
   grapButton: {fileID: 11400000, guid: ef77f16b4481faf47a5ef2d65dced482, type: 2}
-  sword: {fileID: 0}
+  sword: {fileID: 1860379428607196}
   swordSize: 1
 --- !u!114 &114774388129111730
 MonoBehaviour:
