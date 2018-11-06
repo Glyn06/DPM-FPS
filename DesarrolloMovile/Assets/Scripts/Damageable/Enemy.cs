@@ -64,6 +64,9 @@ public class Enemy : MonoBehaviour {
 
             if (PlayerData.instance != null)        
             PlayerData.instance.AddScore(50);
+
+            if (WaveManager.instance != null)
+            WaveManager.instance.OnEnemyDown();
         }
 
         if (isAttacking)
