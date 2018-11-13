@@ -177,13 +177,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4316332648924812}
+  - component: {fileID: 95208370670708584}
+  - component: {fileID: 114725955637000630}
+  - component: {fileID: 65983356252410958}
   m_Layer: 26
   m_Name: SwordPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1256210924265242
 GameObject:
   m_ObjectHideFlags: 1
@@ -292,13 +295,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4118708309870016}
+  - component: {fileID: 95643998913241020}
+  - component: {fileID: 114820058403386564}
+  - component: {fileID: 65047553344420708}
   m_Layer: 26
   m_Name: SwordPivot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1692157053794822
 GameObject:
   m_ObjectHideFlags: 1
@@ -680,7 +686,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1069926570334126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.46, y: 27.203, z: -14.08}
+  m_LocalPosition: {x: 18.46, y: 26, z: -14.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4885856730895874}
@@ -1481,6 +1487,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &65047553344420708
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546430806434650}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 4, z: 0.5}
+  m_Center: {x: 0, y: 2, z: 0}
+--- !u!65 &65983356252410958
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1254660990911146}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 4, z: 0.5}
+  m_Center: {x: 0, y: 2, z: 0}
 --- !u!81 &81048698646597946
 AudioListener:
   m_ObjectHideFlags: 1
@@ -1488,6 +1518,24 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1861714085642986}
   m_Enabled: 1
+--- !u!95 &95208370670708584
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1254660990911146}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 629683b02be91a44183379a8f97e5657, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!95 &95349100275043060
 Animator:
   serializedVersion: 3
@@ -1498,6 +1546,24 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 90c58c65f76dbe741b5dede2c0ac644d, type: 3}
   m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!95 &95643998913241020
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546430806434650}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 29a6bf4c6c033994696840d30fbc67ae, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -1561,6 +1627,7 @@ MonoBehaviour:
   pistolModel: {fileID: 1476485250377700}
   swordModel: {fileID: 1546430806434650}
   rateOfFire: 0.25
+  swordAttackDelay: 1.5
 --- !u!114 &114137439233610446
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1587,6 +1654,7 @@ MonoBehaviour:
   pistolModel: {fileID: 1478882120792204}
   swordModel: {fileID: 1254660990911146}
   rateOfFire: 0.25
+  swordAttackDelay: 1.5
 --- !u!114 &114472722477556504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1681,6 +1749,32 @@ MonoBehaviour:
     slowDownRate: 20
     airControl: 0
     shellOffset: 0
+--- !u!114 &114725955637000630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1254660990911146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8062dedb28450a4d9554c40e5aa9b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSixe: {x: 0.5, y: 0.5, z: 0.5}
+  swordDamage: 5
+--- !u!114 &114820058403386564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1546430806434650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8062dedb28450a4d9554c40e5aa9b4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxSixe: {x: 0.5, y: 0.5, z: 0.5}
+  swordDamage: 5
 --- !u!114 &114940142232228922
 MonoBehaviour:
   m_ObjectHideFlags: 1

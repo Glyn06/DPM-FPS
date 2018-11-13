@@ -11,13 +11,23 @@ public class Weapon : MonoBehaviour {
     Pool bulletPool;
     [SerializeField]
     float rateOfFire = 0.25f;
-    float timer;
+    [SerializeField]
+    float swordAttackDelay = 1.5f;
+    float gunTimer;
+    float swordTimer;
     bool isSword = false;
+    Animator swordAnimation;
+
+    private void Start()
+    {
+        swordAnimation = swordModel.GetComponent<Animator>();
+    }
 
     private void Update()
     {
         gameObject.transform.rotation = cam.transform.rotation;
-        timer += Time.deltaTime;
+        gunTimer += Time.deltaTime;
+        swordTimer += Time.deltaTime;
 
         if (isSword)
         {
@@ -32,18 +42,20 @@ public class Weapon : MonoBehaviour {
     }
 
     public void Fire() {
-        if (!isSword && timer >= rateOfFire)
+        if (!isSword && gunTimer >= rateOfFire)
         {
             bulletPool = PoolManager.instance.GetPool("BulletPool");
             GameObject gameObjectInstance = bulletPool.UseObj(transform.position);
             gameObjectInstance.GetComponent<Bullet>().Fire(transform.forward);
 
-            timer = 0;
+            gunTimer = 0;
         }
 
-        if (isSword)
+        if (isSword && swordTimer >= swordAttackDelay)
         {
             Debug.Log("Oooo you tocuhed my tra lla laa in " + gameObject.name);
+            swordAnimation.SetTrigger("SwordAttack");
+            swordTimer = 0;
         }
     }
 
