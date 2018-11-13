@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
     private NavMeshAgent enemyAgent;
     private Player playerInstance;
     private bool isAttacking;
-    private Damageable target;
+    private PlayerDamageable target;
     [SerializeField] private int maxLife;
     [SerializeField] private float attackSpeed = 1.5f;
     
@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour {
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            target = collision.gameObject.GetComponent<Damageable>();
+            target = collision.gameObject.GetComponent<PlayerDamageable>();
             isAttacking = true;
             enemyAgent.isStopped = true;
             GetComponent<Rigidbody>().velocity = Vector3.zero;
@@ -95,7 +95,8 @@ public class Enemy : MonoBehaviour {
         }
     }
 
-    public void Attack(Damageable _target, int _enemyDamage) {
+    public void Attack(PlayerDamageable _target, int _enemyDamage) {
         _target.SetDamage(_enemyDamage);
+        _target.SetAttackerPos(transform.position);
     }
 }

@@ -24,6 +24,7 @@ public class Player : MonoBehaviour {
     public int life;
 
     private PerkSystem perkSystem;
+    private Vector3 distanceToEnemy;
 
     public void GetAndImplementrPerks()
     {
@@ -42,6 +43,18 @@ public class Player : MonoBehaviour {
 
     public int GetLife() {
         return life;
+    }
+
+    public void CalculateDistanceToAttacker() {
+        PlayerDamageable pdmg = GetComponent<PlayerDamageable>();
+        Vector3 attackerPos = pdmg.GetAttackerPos();
+
+        distanceToEnemy = transform.position - attackerPos;
+        distanceToEnemy.Normalize();
+    }
+
+    public Vector3 GetDistanceToEnemy() {
+        return distanceToEnemy;
     }
 
     private void Update()
