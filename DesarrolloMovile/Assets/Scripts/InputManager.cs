@@ -45,4 +45,17 @@ public class InputManager : MonoBehaviour {
             return true;
         return false;
     }
+
+    public bool RightSword() {
+        if (input.RightSwordButton())
+            return true;
+        return false;
+    }
+
+    public bool LeftSword()
+    {
+        if (input.LeftSwordButton())
+            return true;
+        return false;
+    }
 }

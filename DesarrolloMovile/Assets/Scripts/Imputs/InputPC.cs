@@ -13,9 +13,9 @@ public class InputPC : InputInterface
         return Input.GetMouseButton(1);
     }
     public bool RightSwordButton() {
-        return Input.GetKeyDown(KeyCode.X);
+        return Input.GetKeyDown(KeyCode.C);
     }
     public bool LeftSwordButton() {
-        return Input.GetKeyDown(KeyCode.C);
+        return Input.GetKeyDown(KeyCode.X);
     }
 }

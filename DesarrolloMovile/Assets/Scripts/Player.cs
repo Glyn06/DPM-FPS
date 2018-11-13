@@ -56,6 +56,22 @@ public class Player : MonoBehaviour {
             LeftWeapon.Fire();
         }
 
+        if (InputManager.instance.RightSword())
+        {
+            if (RightWeapon.GetIsSword())
+                RightWeapon.SetIsSword(false);
+            else
+                RightWeapon.SetIsSword(true);
+        }
+
+        if (InputManager.instance.LeftSword())
+        {
+            if (LeftWeapon.GetIsSword())
+                LeftWeapon.SetIsSword(false);
+            else
+                LeftWeapon.SetIsSword(true);
+        }
+
         if (life <= 0)
         {
             Destroy(gameObject);
