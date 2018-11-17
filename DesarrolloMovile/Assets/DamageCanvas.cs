@@ -30,7 +30,7 @@ public class DamageCanvas : MonoBehaviour {
         effectPos.x = player.GetDistanceToEnemy().x;
         effectPos.y = player.GetDistanceToEnemy().z;
 
+
         Instantiate(dmgSourcePrefab, effectPos, Quaternion.identity, transform);
-        Debug.Log("Damage Efect");
     }
 }
