@@ -25,7 +25,8 @@ public class Weapon : MonoBehaviour {
 
     private void Update()
     {
-        gameObject.transform.rotation = cam.transform.rotation;
+        if(cam != null)
+            gameObject.transform.rotation = cam.transform.rotation;
         gunTimer += Time.deltaTime;
         swordTimer += Time.deltaTime;
 
