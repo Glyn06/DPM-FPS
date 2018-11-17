@@ -9,7 +9,7 @@ public class FlyingEnemy : MonoBehaviour {
     public int life;
     [SerializeField]
     private int maxLife;
-    private Player playerInstance;
+    private Player_PC playerInstance;
 
     private float t = 0;
     private Vector3 p0;
@@ -51,7 +51,7 @@ public class FlyingEnemy : MonoBehaviour {
         p2 = RandomizePoint(p2);
         p3 = RandomizePoint(p3);
         rb = GetComponent<Rigidbody>();
-        playerInstance = Player.instance;
+        playerInstance = Player_PC.instance;
 
     }
 

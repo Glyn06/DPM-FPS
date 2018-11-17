@@ -7,7 +7,7 @@ public abstract class Perk : ScriptableObject {
     public Sprite icon;
 
     protected List<Weapon> weapons;
-    protected Player player; 
+    protected Player_PC player; 
 
     public abstract void ImplementPerk();
     public abstract void UnimplementPerk();
@@ -17,7 +17,7 @@ public abstract class Perk : ScriptableObject {
         weapons.Add(weaponB);
     }
 
-    public void SetPlayer(Player _player) {
+    public void SetPlayer(Player_PC _player) {
         player = _player;
     }
 }

@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour {
     public int life;
     public int enemyDamage;
     private NavMeshAgent enemyAgent;
-    private Player playerInstance;
+    private Player_PC playerInstance;
     private bool isAttacking;
     private PlayerDamageable target;
     [SerializeField] private int maxLife;
@@ -20,7 +20,7 @@ public class Enemy : MonoBehaviour {
 
     private void Start()
     {
-        playerInstance = Player.instance;
+        playerInstance = Player_PC.instance;
         enemyAgent = GetComponent<NavMeshAgent>();
     }
 

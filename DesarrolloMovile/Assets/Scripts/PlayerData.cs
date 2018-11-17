@@ -20,7 +20,7 @@ public class PlayerData : MonoBehaviour {
     public delegate void OnScoreChange();
     public OnScoreChange onScoreChangeCallBack;
 
-    public Player player;
+    public Player_PC player;
 
     int score = 0;
 

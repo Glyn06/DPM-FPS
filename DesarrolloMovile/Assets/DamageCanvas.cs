@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DamageCanvas : MonoBehaviour {
-    private Player player;
+    private Player_PC player;
     private Vector2 effectPos;
     private Vector3 aux;
     public GameObject dmgSourcePrefab;
 
     private void Start()
     {
-        player = Player.instance;
+        player = Player_PC.instance;
         aux = Vector3.zero;
     }
 

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class PlayerDamageable : Damageable {
 
-    private Player player;
+    private Player_PC player;
     private Vector3 attackerPos;
     void Start()
     {
-        player = GetComponent<Player>();
+        player = GetComponent<Player_PC>();
     }
 
     public override void SetDamage(int damage)
