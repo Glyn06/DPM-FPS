@@ -22,7 +22,7 @@ public class Weapon : MonoBehaviour
 
     private void Start()
     {
-        //swordAnimation = swordModel.GetComponent<Animator>();
+        swordAnimation = swordModel.GetComponent<Animator>();
     }
 
     private void Update()
