@@ -77,17 +77,32 @@ public class Player : MonoBehaviour
         if (InputManager.instance.RightSword())
         {
             if (RightWeapon.GetIsSword())
+            {
                 RightWeapon.SetIsSword(false);
+                AudioManager.instance.Play("saber_open"); 
+            }
             else
+            {
                 RightWeapon.SetIsSword(true);
+                AudioManager.instance.Play("saber_close");
+
+            }
         }
 
         if (InputManager.instance.LeftSword())
         {
             if (LeftWeapon.GetIsSword())
+            {
                 LeftWeapon.SetIsSword(false);
+                AudioManager.instance.Play("saber_open");
+
+            }
             else
+            {
                 LeftWeapon.SetIsSword(true);
+                AudioManager.instance.Play("saber_close");
+
+            }
         }
 
         if (life <= 0)

@@ -31,4 +31,11 @@ public class AudioManager : MonoBehaviour {
             Debug.LogWarning("The sound " + s.clipName + " does not exist");
         s.source.Play();
     }
+    public void Stop(string _clipName)
+    {
+        Sound s = Array.Find(sounds, sound => sound.clipName == _clipName);
+        if (s == null)
+            Debug.LogWarning("The sound " + s.clipName + " does not exist");
+        s.source.Stop();
+    }
 }

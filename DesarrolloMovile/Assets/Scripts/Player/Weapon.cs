@@ -8,7 +8,6 @@ public class Weapon : MonoBehaviour
     public Camera cam;
     public GameObject pistolModel;
     public GameObject swordModel;
-    public AudioSource audioSource;
 
     Pool bulletPool;
     [SerializeField]
@@ -54,7 +53,7 @@ public class Weapon : MonoBehaviour
 
             gunTimer = 0;
 
-            AudioManager.instance.Play("WeaponSound");
+            AudioManager.instance.Play("WeaponSound_" + Random.Range(0,4).ToString());
         }
 
         if (isSword && swordTimer >= swordAttackDelay)

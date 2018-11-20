@@ -13,6 +13,7 @@ public class Sword : MonoBehaviour {
         size = MaxSixe;
         size.y = 0;
         transform.localScale = size;
+        Invoke("PlayAudio", 1.0f);
     }
 
     void Start () {
@@ -26,6 +27,19 @@ public class Sword : MonoBehaviour {
             transform.localScale = size;
 
         }
+      
+
+    }
+    
+    private void PlayAudio()
+    {
+        AudioManager.instance.Play("saber_idle");
+
+    }
+    private void OnDisable()
+    {
+            AudioManager.instance.Stop("saber_idle");
+
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -35,6 +49,8 @@ public class Sword : MonoBehaviour {
         if (damageable != null)
         {
             damageable.SetDamage(swordDamage);
+            AudioManager.instance.Play("saber_crash");
+
         }
     }
 }

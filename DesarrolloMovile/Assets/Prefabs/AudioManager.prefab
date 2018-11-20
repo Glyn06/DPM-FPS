@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1068338831605172}
+  m_IsPrefabAsset: 1
+--- !u!1 &1068338831605172
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4104042506446896}
+  - component: {fileID: 114880962302681710}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4104042506446896
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068338831605172}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114880962302681710
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1068338831605172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4960b72440390940994f8c87479673e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - clipName: WeaponSound_1
+    clip: {fileID: 8300000, guid: 20f4888daa08d364f9858337d84e3c7a, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
+  - clipName: WeaponSound_2
+    clip: {fileID: 8300000, guid: 4ebbe8943a3f52249b7e04d44f78a83b, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
+  - clipName: WeaponSound_3
+    clip: {fileID: 8300000, guid: b816227784ae95f4087edee2d376d088, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
+  - clipName: WeaponSound_4
+    clip: {fileID: 8300000, guid: ba8d4c0ad4eb6dc4999bf49bdbf38fcc, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
+  - clipName: WeaponSound_5
+    clip: {fileID: 8300000, guid: 5c80065f722e8e441b59fc5d4cff1042, type: 3}
+    volume: 0.8
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
+  - clipName: saber_open
+    clip: {fileID: 8300000, guid: 0efae7fb9b7f9e4479f281a0b922a850, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
+  - clipName: saber_idle
+    clip: {fileID: 8300000, guid: f6d583e17c3d70c43a78e6428bb2127d, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
+  - clipName: saber_crash
+    clip: {fileID: 8300000, guid: 8002afec649a16443817e93f4e842a00, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
+  - clipName: saber_close
+    clip: {fileID: 8300000, guid: ace438697bc40a04a828a0c17ca856c1, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+    resonanceSource: {fileID: 0}
