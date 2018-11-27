@@ -13,7 +13,7 @@ public class Sword : MonoBehaviour {
         size = MaxSixe;
         size.y = 0;
         transform.localScale = size;
-        Invoke("PlayAudio", 1.0f);
+        AudioManager.instance.PlayAtGameObject("saber_idle", gameObject);
     }
 
     void Start () {
@@ -30,12 +30,7 @@ public class Sword : MonoBehaviour {
       
 
     }
-    
-    private void PlayAudio()
-    {
-        AudioManager.instance.Play("saber_idle");
 
-    }
     private void OnDisable()
     {
             AudioManager.instance.Stop("saber_idle");
@@ -49,7 +44,7 @@ public class Sword : MonoBehaviour {
         if (damageable != null)
         {
             damageable.SetDamage(swordDamage);
-            AudioManager.instance.Play("saber_crash");
+            AudioManager.instance.PlayAtGameObject("saber_crash", gameObject);
 
         }
     }

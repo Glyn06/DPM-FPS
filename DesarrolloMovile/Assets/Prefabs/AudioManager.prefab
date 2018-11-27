@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1068338831605172}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 18.46, y: 27.203, z: -14.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,67 +51,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4960b72440390940994f8c87479673e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResonanceMixerGroup: {fileID: 24300002, guid: 248799cb4acba48f7b3ee842a80f788c,
+    type: 2}
   sounds:
   - clipName: WeaponSound_1
     clip: {fileID: 8300000, guid: 20f4888daa08d364f9858337d84e3c7a, type: 3}
     volume: 0.8
     pitch: 1
     loop: 0
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}
   - clipName: WeaponSound_2
     clip: {fileID: 8300000, guid: 4ebbe8943a3f52249b7e04d44f78a83b, type: 3}
     volume: 0.8
     pitch: 1
     loop: 0
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}
   - clipName: WeaponSound_3
     clip: {fileID: 8300000, guid: b816227784ae95f4087edee2d376d088, type: 3}
-    volume: 0.8
+    volume: 1.1
     pitch: 1
     loop: 0
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}
   - clipName: WeaponSound_4
     clip: {fileID: 8300000, guid: ba8d4c0ad4eb6dc4999bf49bdbf38fcc, type: 3}
     volume: 0.8
     pitch: 1
     loop: 0
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}
   - clipName: WeaponSound_5
     clip: {fileID: 8300000, guid: 5c80065f722e8e441b59fc5d4cff1042, type: 3}
     volume: 0.8
     pitch: 1
     loop: 0
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}
   - clipName: saber_open
     clip: {fileID: 8300000, guid: 0efae7fb9b7f9e4479f281a0b922a850, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}
   - clipName: saber_idle
     clip: {fileID: 8300000, guid: f6d583e17c3d70c43a78e6428bb2127d, type: 3}
     volume: 0.6
     pitch: 1
     loop: 1
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}
   - clipName: saber_crash
     clip: {fileID: 8300000, guid: 8002afec649a16443817e93f4e842a00, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}
   - clipName: saber_close
     clip: {fileID: 8300000, guid: ace438697bc40a04a828a0c17ca856c1, type: 3}
     volume: 1
     pitch: 1
     loop: 0
+    bypassReverbZone: 1
+    spatialblend: 1
     source: {fileID: 0}
-    resonanceSource: {fileID: 0}

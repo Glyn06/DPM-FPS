@@ -53,7 +53,8 @@ public class Weapon : MonoBehaviour
 
             gunTimer = 0;
 
-            AudioManager.instance.Play("WeaponSound_" + Random.Range(1,6).ToString());
+            //AudioManager.instance.Play("WeaponSound_" + Random.Range(1,6).ToString());
+            AudioManager.instance.PlayAtGameObject("WeaponSound_" + Random.Range(1, 6).ToString(), gameObject);
         }
 
         if (isSword && swordTimer >= swordAttackDelay)
